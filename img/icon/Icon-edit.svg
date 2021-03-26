@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25" viewBox="0 0 29.25 29.25">
+  <g id="Icon-edit" transform="translate(-3.375 -3.375)">
+    <path id="Path_10" data-name="Path 10" d="M18,5.344A12.651,12.651,0,1,1,9.049,9.049,12.573,12.573,0,0,1,18,5.344m0-1.969A14.625,14.625,0,1,0,32.625,18,14.623,14.623,0,0,0,18,3.375Z" fill="#fff"/>
+    <path id="Icon_material-edit" data-name="Icon material-edit" d="M4.5,15.576v2.915H7.415l8.6-8.6L13.1,6.978ZM18.268,7.639a.774.774,0,0,0,0-1.1L16.449,4.724a.774.774,0,0,0-1.1,0L13.93,6.146l2.915,2.915Z" transform="translate(6.875 6.879)" fill="#fff"/>
+  </g>
+</svg>

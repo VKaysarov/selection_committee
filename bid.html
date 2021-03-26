@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подача заявления</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <h2>Подайча заявления</h2>
+    <form action="bid.php" enctype="multipart/form-data" method="POST">
+        <div class="input-group">
+            <label>
+                ФИО
+                <input type="text" name="FIO">
+            </label>
+        </div>
+        <div class="input-group">
+            <label>
+                Номер паспорта
+                <input type="text" name="number_passport">
+            </label>
+        </div>
+        <div class="input-group">
+            <label>
+                Серия паспорта
+                <input type="text" name="series_passport">
+            </label>
+        </div>
+        <div class="input-group">
+            <label>
+                Адрес
+                <input type="text" name="address">
+            </label>
+        </div>
+        <div class="input-group">
+            <label>
+                Телефон
+                <input type="text" name="phone">
+            </label>
+        </div>
+        <div class="input-group">
+            <label>
+                Специальность
+                <select name="special">
+                    <option value="">Сварщик</option>
+                    <option value="">Электрик</option>
+                    <option value="">Программист</option>
+                </select>
+            </label>
+        </div>
+        <div class="input-group">
+            <label>
+                Скан аттестата
+                <input type="file" name="scanfile">
+            </label>
+        </div>
+        <button type="submit" class="btn btn--primary">Отправить</button>
+    </form>
+</body>
+</html>

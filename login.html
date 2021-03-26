@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Авторизация</title>
+	<link rel="stylesheet" href="style/login.css">
+</head>
+<body>
+	<header class="container">
+		<div class="logo">
+			<img src="img/logo.svg" alt="logo">
+		</div>
+		<nav>
+			<ul class="nav-menu">
+				<li><a href="index.html">Главная</a></li>
+				<li><a href="rating.html">Рейтинг</a></li>
+				<li><a href="bid.html">Подать заявление</a></li>
+				<li><a href="login.html">Войти</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main class="container">
+		<div class="wrapper-form">
+			<form action="login.php" method="POST">
+				<h2>Авторизация</h2>
+				<div :class="{'has-error': email.error.status}">
+					<label for="" class="label">Email</label>
+					<div>
+						<input type="text" name="phone" placeholder="email@email.com" v-model="email.value">
+						<!-- <img src="img/icons/email.svg"> -->
+					</div>
+				</div>
+				<div :class="{'has-error': password.error.status}">
+					<label for="" class="label">Пароль</label>
+					<div>
+						<input type="password" name="password" placeholder="••••••••" v-model="password.value">
+						<img src="img/icon/icon-password.svg" class="input-icon">
+					</div>
+				</div>
+				<div class="center">
+					Забыли пароль?<a href="#">Восстановить</a>
+				</div>
+				<div>
+					<button @click.prevent="login">Авторизоваться</button>
+				</div>
+			</form>
+		</div>
+	</main>
+	<footer>
+		<div class="copyright">Copyright © Виктор Кайсаров 2020. Все права защищены.</div>
+	</footer>
+</body>
+</html>

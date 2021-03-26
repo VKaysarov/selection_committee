@@ -1,0 +1,10 @@
+<svg id="Logo" xmlns="http://www.w3.org/2000/svg" width="303" height="53" viewBox="0 0 303 53">
+  <path id="Icon_awesome-university" data-name="Icon awesome-university" d="M49.339,11.893V13.5a.8.8,0,0,1-.8.8H46.125v1.205a1.205,1.205,0,0,1-1.205,1.205H5.545a1.205,1.205,0,0,1-1.205-1.205V14.3H1.929a.8.8,0,0,1-.8-.8V11.893a.8.8,0,0,1,.5-.742l23.3-8.839a.8.8,0,0,1,.615,0l23.3,8.839A.8.8,0,0,1,49.339,11.893ZM46.929,42.429H3.536a2.411,2.411,0,0,0-2.411,2.411v1.607a.8.8,0,0,0,.8.8H48.536a.8.8,0,0,0,.8-.8V44.839A2.411,2.411,0,0,0,46.929,42.429ZM9.161,18.321V37.607H5.545a1.205,1.205,0,0,0-1.205,1.205v2.009H46.125V38.812a1.205,1.205,0,0,0-1.205-1.205H41.3V18.321H34.875V37.607H28.446V18.321H22.018V37.607H15.589V18.321Z" transform="translate(-1.125 2.75)" fill="#ff4949"/>
+  <line id="Line_1" data-name="Line 1" y2="45" transform="translate(59.5 4.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+  <g id="Group_50" data-name="Group 50" transform="translate(-342 -67)">
+    <g id="Logo-2" data-name="Logo" transform="translate(412 67)">
+      <text id="Приемная_комиссия" data-name="Приемная комиссия" transform="translate(0 26)" fill="#002776" font-size="24" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">Приемная</tspan><tspan y="0" font-family="SourceSansPro-Semibold, Source Sans Pro"> </tspan><tspan y="0">Комиссия</tspan></text>
+    </g>
+    <text id="поступай_правильно" data-name="поступай правильно" transform="translate(412 115)" fill="#002776" font-size="14" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">поступай</tspan><tspan y="0" font-family="Nunito-Regular, Nunito"> </tspan><tspan y="0">правильно</tspan></text>
+  </g>
+</svg>

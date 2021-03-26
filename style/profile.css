@@ -1,0 +1,142 @@
+/* ===========================Basic Style=========================== */
+:root {
+	--primary-color: #002776; /*Темно синий*/
+	--bg-card: #F1F7FF; /*Светло синий*/
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+h1 {
+	font-size: 2.8rem;
+	margin-top: 3em;
+	margin-bottom: 1em;
+}
+
+h2 {
+	font-size: 2rem;
+	margin-bottom: 1.5em;
+}
+
+h3 {
+	font-size: 1.8rem;
+	margin-bottom: .5em;
+}
+
+p {
+	font-size: 1.25rem;
+	color: #ffffffc7;
+	margin-bottom: 2em;
+}
+
+.content {
+	display: grid;
+	grid-template-columns: minmax(0, 20%) 258px 80px 80px 580px minmax(0, 20%);
+}
+
+.header {
+	padding-top: 20px;
+}
+
+.body {
+}
+
+.left-content, .right-content {
+	display: grid;
+    grid-template-rows: 150px 1fr 100px;
+}
+
+/*===============Left===============*/
+
+.left-bg {
+	background-color: var(--primary-color);
+}
+
+.left-content {
+	height: 100vh;
+	color: #fff;
+	background-color: var(--primary-color);
+}
+
+.left-content a {
+	color: #ccc;
+	text-decoration: none;
+}
+
+figcaption {
+	font-weight: 700;
+}
+
+.tabs {
+	margin-top: 45px;
+}
+
+.tabs__link {
+	display: flex;
+	align-items: center;
+	margin: 20px 0;
+}
+
+.tabs__link span {
+	margin-left: 10px;
+}
+
+/*===============Right===============*/
+
+.card {
+	color: var(--primary-color);
+	padding: 40px;
+	border-radius: 15px;
+	background-color: var(--bg-card);
+}
+
+.card__body ul {
+	list-style-type: none;
+}
+
+.card__body li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 15px 0;
+}
+
+/*Nav-Menu*/
+
+.nav-main {
+	display: flex;
+	float: right;
+}
+
+.nav-icon {
+	margin-left: 15px;
+}
+
+.profile-link {
+	display: flex;
+	align-items: center;
+	color: var(--primary-color);
+	text-decoration: none;
+	margin-left: 50px;
+}
+
+.profile-link img {
+	margin-right: 10px;
+}
+
+/*btn*/
+
+.btn {
+	padding: 1.2em 2em;
+}
+
+.btn--primary {
+	margin-top: 50px;
+	color: var(--primary-color);
+	border: 1px solid var(--primary-color);
+	background-color: transparent;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рейтинг абитуриентов</title>
+    <link rel="stylesheet" href="style/rating.css">
+</head>
+
+<body>
+    <header class="header container">
+        <img src="img/Logo-blue.svg" alt="Logo">
+        <nav class="nav-main">
+            <a href="rating.html">
+                <img src="img/icon/Icon-chart-bar.svg" alt="chart-bar">
+            </a>
+            <a href="#" class="nav-icon">
+                <img src="img/icon/Icon-mail.svg" alt="message">
+            </a>
+            <a href="profile.html" class="profile-link">
+                <img src="img/icon/icon-user.svg" alt="icon-user">
+                <span>Иван Иванов</span>
+            </a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Рейтинг абитуриентов</h2>
+        <div>
+            <select id="specialty" name="specialty">
+                <option value="Программист">Программисты</option>
+                <option value="Электрик">Электрики</option>
+            </select>
+        </div>
+
+        <div class="table">
+        	<div class="table__header">
+        		<div>Позиция в рейтинге</div>
+        		<div>Имя</div>
+        		<div>Фамилия</div>
+        		<div>Отчество</div>
+        		<div>Средний балл</div>
+        	</div>
+        	<div class="table__body"></div>
+        </div>
+    </div>  
+
+    <script>
+    	const SPECIALTY = document.querySelector('#specialty');
+        const URL = 'rating.php';
+
+    	SPECIALTY.addEventListener('change', () => {
+            let get_request = SPECIALTY.value;
+    		getRating(URL, get_request);
+    	})
+
+    	function getRating(url, get_request) {
+	    	fetch(`${url}?specialty=${get_request}`)
+	    	.then((response) => response.json())
+	    	.then((result) => {
+	    
+	    		const TABLE_BODY = document.querySelector('.table__body');
+                TABLE_BODY.innerHTML = '';
+	    		let i = 1;
+	    		for (let enrolle of result) {
+	    			let full_name = enrolle.full_name.split(' ');
+	    			let div = document.createElement('div');
+					div.className = "table__row";
+	    			div.innerHTML = `<div>${i}</div>
+	    							<div>${full_name[0]}</div>
+	    							<div>${full_name[1]}</div>
+	    							<div>${full_name[2]}</div>
+	    							<div>${enrolle.average_score}</div>`;
+	    			TABLE_BODY.append(div);
+	    			i++;
+	    		}
+	    	})
+    	}
+
+    	getRating(URL, 'Программист');
+
+    </script>
+</body>
+</html>
