@@ -14,7 +14,6 @@
 h1 {
     font-size: 2.8rem;
     margin-top: 3em;
-    margin-bottom: 1em;
 }
 
 h2 {
@@ -35,7 +34,7 @@ p {
 
 .content {
     display: grid;
-    grid-template-columns: minmax(0, 20%) 258px 80px 80px 580px minmax(0, 20%);
+    grid-template-columns: minmax(0, 24%) 302px 80px 80px 700px minmax(0, 24%);
     background-image: url(../img/bg-main.png);
 }
 
@@ -73,7 +72,8 @@ p {
 /*===============Right===============*/
 
 .right-bg, .right-content {
-    background-color: rgba(0, 39, 118, .8);
+    background-color: rgba(0, 7, 33, .8);
+    /*background-color: rgba(11, 6, 51, .8);*/
 }
 
 .right-content {

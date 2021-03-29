@@ -87,22 +87,30 @@ figcaption {
 
 /*===============Right===============*/
 
-.card {
-	color: var(--primary-color);
-	padding: 40px;
-	border-radius: 15px;
-	background-color: var(--bg-card);
+.messanger {
+	border: 1px solid #0064BB;
+	background-color: #E9E9F0;
 }
 
-.card__body ul {
-	list-style-type: none;
-}
-
-.card__body li {
+.messanger__header {
+	color: #ccc;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	margin: 15px 0;
+	padding: 15px;
+	background-color: var(--primary-color);
+}
+
+.messanger__body {
+	padding: 20px;
+}
+
+.messanger__footer {
+	display: grid;
+	grid-template-columns: 1fr 120px;
+}
+
+.messanger__footer input {
+	padding-left: 20px;
 }
 
 /*Nav-Menu*/
@@ -148,7 +156,6 @@ figcaption {
 }
 
 .btn--primary {
-	margin-top: 50px;
 	color: var(--primary-color);
 	border: 1px solid var(--primary-color);
 	background-color: transparent;

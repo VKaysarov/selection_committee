@@ -24,17 +24,17 @@
 		<div class="wrapper-form">
 			<form action="login.php" method="POST">
 				<h2>Авторизация</h2>
-				<div :class="{'has-error': email.error.status}">
-					<label for="" class="label">Email</label>
+				<div>
+					<label for="phone" class="label">Телефон</label>
 					<div>
-						<input type="text" name="phone" placeholder="email@email.com" v-model="email.value">
-						<!-- <img src="img/icons/email.svg"> -->
+						<input type="text" id="phone" name="phone" placeholder="+7 (900) 000 00-00">
+						<!-- <img src="img/icon/Icon-mail-blue.svg" class="input-icon" width="20"> -->
 					</div>
 				</div>
-				<div :class="{'has-error': password.error.status}">
-					<label for="" class="label">Пароль</label>
+				<div>
+					<label for="password" class="label">Пароль</label>
 					<div>
-						<input type="password" name="password" placeholder="••••••••" v-model="password.value">
+						<input type="password" id="password" name="password" placeholder="••••••••">
 						<img src="img/icon/icon-password.svg" class="input-icon">
 					</div>
 				</div>
@@ -42,13 +42,38 @@
 					Забыли пароль?<a href="#">Восстановить</a>
 				</div>
 				<div>
-					<button @click.prevent="login">Авторизоваться</button>
+					<button id="login">Авторизоваться</button>
 				</div>
 			</form>
 		</div>
 	</main>
-	<footer>
-		<div class="copyright">Copyright © Виктор Кайсаров 2020. Все права защищены.</div>
-	</footer>
+    <script>
+    	const LOGIN = document.querySelector('#login');
+        const URL = 'login.php';
+
+    	LOGIN.addEventListener('click', (event) => {
+    		event.preventDefault();
+    		const PHONE = document.querySelector('#phone').value;
+    		const PASSWORD = document.querySelector('#password').value;
+    		let body = `phone=${PHONE}&password=${PASSWORD}`;
+    		getRating(URL, body);
+    	})
+
+    	function getRating(url, body) {
+    		console.log(body)
+	    	fetch(url, {
+	    		method: 'POST',
+	    		header: {
+	    			'Content-Type': 'application/x-www-form-urlencoded',
+	    		},
+	    		body: body
+	    	})
+	    	.then((response) => response.text())
+	    	.then((result) => {
+	    		console.log(result);
+	    	})
+    	}
+
+    </script>
 </body>
 </html>

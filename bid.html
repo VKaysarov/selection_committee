@@ -5,58 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Подача заявления</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/bid.css">
 </head>
 <body>
-    <h2>Подайча заявления</h2>
-    <form action="bid.php" enctype="multipart/form-data" method="POST">
-        <div class="input-group">
-            <label>
-                ФИО
+    <header class="container">
+        <a href="index.html" class="logo">
+            <img src="img/logo.svg" alt="logo">
+        </a>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="rating.html">Рейтинг</a></li>
+                <li><a href="bid.html">Подать заявление</a></li>
+                <li><a href="login.html">Войти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="form-info">
+            <h2>Подача заявления</h2>
+        </div>
+        <form action="bid.php" enctype="multipart/form-data" method="POST">
+            <div class="input-group">
+                <label class="label">ФИО</label>
                 <input type="text" name="FIO">
-            </label>
-        </div>
-        <div class="input-group">
-            <label>
-                Номер паспорта
-                <input type="text" name="number_passport">
-            </label>
-        </div>
-        <div class="input-group">
-            <label>
-                Серия паспорта
-                <input type="text" name="series_passport">
-            </label>
-        </div>
-        <div class="input-group">
-            <label>
-                Адрес
-                <input type="text" name="address">
-            </label>
-        </div>
-        <div class="input-group">
-            <label>
-                Телефон
-                <input type="text" name="phone">
-            </label>
-        </div>
-        <div class="input-group">
-            <label>
-                Специальность
-                <select name="special">
-                    <option value="">Сварщик</option>
-                    <option value="">Электрик</option>
-                    <option value="">Программист</option>
-                </select>
-            </label>
-        </div>
-        <div class="input-group">
-            <label>
-                Скан аттестата
+            </div>
+            <div class="input-wrapper">
+                <div class="input-group">
+                    <label class="label">Номер паспорта</label>
+                    <input type="text" name="number_passport">
+                </div>
+                <div class="input-group">
+                    <label class="label">Серия паспорта</label>
+                    <input type="text" name="series_passport">
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <div class="input-group">
+                    <label class="label">Адрес</label>
+                    <input type="text" name="address">
+                </div>
+                <div class="input-group">
+                    <label class="label">Телефон</label>
+                    <input type="text" name="phone">
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <div class="input-group">
+                    <label class="label">Специальность</label>
+                    <select name="special">
+                        <option value="">Сварщик</option>
+                        <option value="">Электрик</option>
+                        <option value="">Программист</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label class="label">Дата рождения</label>
+                    <input type="data">
+                </div>
+            </div>
+            <div class="input-group">
+                <label class="label">Скан аттестата</label>
                 <input type="file" name="scanfile">
-            </label>
-        </div>
-        <button type="submit" class="btn btn--primary">Отправить</button>
-    </form>
+            </div>
+            <button type="submit" class="btn btn--primary">Отправить</button>
+        </form>
+    </main>
 </body>
 </html>
